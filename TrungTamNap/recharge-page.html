@@ -18,7 +18,7 @@
             <div class="cart-icon header-right">
                 <a href="../cart.html">🛒</a>
                 <button class="btn-login">
-                    <a href="#" class="login-link" id="open-login">Đăng Nhập</a>
+                    <a href="#git" class="login-link" id="open-login">Đăng Nhập</a>
                 </button>
             </div>
         </div>
@@ -26,6 +26,42 @@
 
     <div class="container-x">
         <div id="overlay" class="overlay"></div>
+
+        <div id="cart-modal" class="cart-modal">
+            <button class="close-btn">&times;</button>
+            <div class="cart-header">
+                <img src="../image/hoyoverse-logo.png" alt="Logo" class="logo">
+            </div>
+            <h2>Đăng Nhập Tài Khoản</h2>
+            <form class="cart-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Tên Người Dùng/Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Mật Khẩu" required>
+                </div>
+                <button type="submit" class="login-button">Đăng Nhập</button>
+                <button class="btn-register" style="visibility: hidden; margin: -2rem;"><a href="#" id="open-register">Đăng Ký</a></button>
+                <div class="options">
+                    <a href="#" class="help-link">Gặp Khó Khăn</a>
+                    <a href="#" id="switch-to-register">Đăng Ký Ngay</a>
+                </div>
+            </form>
+            <div class="alternative-login">
+                <table><tr>
+                    <td style="width:20%;"><hr/></td>
+                    <td style="vertical-align:middle; text-align: center">Đăng nhập bằng phương thức khác</td>
+                    <td style="width:20%"><hr/></td>
+                    </tr></table>
+                <!-- <p></p><hr style="position: absolute;"> -->
+                <div class="social-icons">
+                    <img src="../image/google-icon.png" alt="Google">
+                    <img src="../image/apple-icon.png" alt="Apple">
+                    <img src="../image/facebook-icon.png" alt="Facebook">
+                    <img src="../image/twitter-icon.png" alt="Twitter">
+                </div>
+            </div>
+        </div>
 
         <div id="login-modal" class="login-modal">
             <button class="close-btn">&times;</button>
