@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-modal {
+    background-color: #fff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ddd;
+    color: #999;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.options a {
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.options a.register-link {
+    color: #f0b90b;
+}
+
+.alternative-login {
+    margin-top: 20px;
+}
+
+.alternative-login p {
+    font-size: 12px;
+    color: #999;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+</style>
+
+<body>
+    <div class="login-modal">
+        <div class="login-header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <button class="close-btn">&times;</button>
+        </div>
+        <h2>Đăng Nhập Tài Khoản</h2>
+        <form class="login-form">
+            <div class="form-group">
+                <input type="text" placeholder="Tên Người Dùng/Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Mật Khẩu" required>
+            </div>
+            <button type="submit" class="login-button">Đăng Nhập</button>
+            <div class="options">
+                <a href="#" class="help-link">Gặp Khó Khăn</a>
+                <a href="#" class="register-link">Đăng Ký Ngay</a>
+            </div>
+        </form>
+        <div class="alternative-login">
+            <p>Đăng nhập bằng phương thức khác</p>
+            <div class="social-icons">
+                <img src="google-icon.png" alt="Google">
+                <img src="apple-icon.png" alt="Apple">
+                <img src="facebook-icon.png" alt="Facebook">
+                <img src="twitter-icon.png" alt="Twitter">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const formInputs = document.querySelectorAll('.form-next input');
+    const formLabels = document.querySelectorAll('.form-next label');
+
+    formInputs.forEach((input, index) => {
+        input.addEventListener('mouseover', () => {
+            formLabels[index].classList.add("four");
+        });
+        input.addEventListener('mouseout', () => {
+            formLabels[index].classList.remove("four");
+        });
+    });
+</script>
+
+</html>

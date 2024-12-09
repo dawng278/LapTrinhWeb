@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact - Đi vào thế giới thần kỳ đầy mạo hiểm.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="icon_path" type="image/icon type">
+    <link rel="stylesheet" href="../TrangChu/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../TrangChu/script.js"></script>
+</head>
+<body>
+<div class="home">
+    <div class="header">
+        <div class="layout">
+            <div class="audio-controller">
+                <a href="#">
+                    <img src="../image/audio-controller-off.png" alt="">
+                  </a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 0;">
+            <div class="container-fluid" style="padding: 0;">
+                <div class="header-logo">
+             
+                    <a class="navbar-brand" href="#">
+                        <img src="../image/logo_genshinimpact.png" alt="">
+                    </a>
+
+                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    
+                </span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 66px; margin-left: -5rem;"> <!--margin-top: 1.5rem; background-color: rgba(17, 17, 17, 0.75);-->
+                <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../TrangChu/index.html">Trang Chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../TinTuc/news.html">Tin Tức</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nhân Vật</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tư Liệu
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Giới Thiệu Game</a></li>
+                      <li><a class="dropdown-item" href="#">Thế Giới</a></li>
+                      <li><a class="dropdown-item" href="#">Tạp Chí</a></li>
+                      <li><a class="dropdown-item" href="#">Truyện Tranh</a></li>
+                    </ul>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">HoYoLAB</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../TrungTamNap/recharge-page.html">Trung Tâm Nạp</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Mã Quà</a>
+                  </li>
+                </ul>
+                    <button class="btn-login">
+                        <a href="#" class="login-link" id="open-login">Đăng Nhập</a>
+                        <img src="../image/icon-login.png" alt="">
+                    </button>
+                    
+                    <button class="btn-register" style="visibility: hidden; margin: -2rem;">
+                        <a href="#" id="open-register">Đăng Ký</a>
+                    </button>
+                        <div class="transition-img">
+                            <img src="../image/download-btn.png" alt="">
+                        </div>
+              </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-x">
+        <div id="overlay" class="overlay"></div>
+
+        <div id="login-modal" class="login-modal">
+            <button class="close-btn">&times;</button>
+            <div class="login-header">
+                <img src="../image/hoyoverse-logo.png" alt="Logo" class="logo">
+            </div>
+            <h2>Đăng Nhập Tài Khoản</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Tên Người Dùng/Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Mật Khẩu" required>
+                </div>
+                <button type="submit" class="login-button">Đăng Nhập</button>
+                <div class="options">
+                    <a href="#" class="help-link">Gặp Khó Khăn</a>
+                    <a href="#" id="switch-to-register">Đăng Ký Ngay</a>
+                </div>
+            </form>
+            <div class="alternative-login">
+                <p>Đăng nhập bằng phương thức khác</p>
+                <div class="social-icons">
+                    <img src="../image/google-icon.png" alt="Google">
+                    <img src="../image/apple-icon.png" alt="Apple">
+                    <img src="../image/facebook-icon.png" alt="Facebook">
+                    <img src="../image/twitter-icon.png" alt="Twitter">
+                </div>
+            </div>
+        </div>
+
+        <div id="register-modal" class="register-modal">
+            <button class="close-btn">&times;</button>
+            <div class="login-header">
+                <img src="../image/hoyoverse-logo.png" alt="Logo" class="logo">
+            </div>
+            <h2 style="text-align: center;">Đăng Ký Tài Khoản</h2>
+            <form class="register-form">
+                <div class="form-group email-group">
+                    <input type="email" placeholder="Email" required>
+                    <button type="button" class="send-button">Gửi</button>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Mã Xác Nhận" required>
+                    
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Vui lòng nhập mật khẩu" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Vui lòng nhập lại mật khẩu" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" required>
+                    <label>Tôi đã đọc và đồng ý với Điều Khoản Dịch Vụ & Chính Sách Về Quyền Riêng Tư</label>
+                </div>
+                <button type="submit" class="register-button">Đăng Ký</button>
+                <div class="options">
+                    <span>Đã có tài khoản?<a href="#" id="switch-to-login"> Đăng Nhập</a></span>
+                </div>
+            </form>
+            <hr>
+            <div class="alternative-login" style="text-align: center;">
+                <p>Đăng nhập bằng phương thức khác</p>
+                <div class="social-icons">
+                    <img src="../image/google-icon.png" alt="Google">
+                    <img src="../image/apple-icon.png" alt="Apple">
+                    <img src="../image/facebook-icon.png" alt="Facebook">
+                    <img src="../image/twitter-icon.png" alt="Twitter">
+                </div>
+            </div>
+        </div>
+
+        <div id="bgWrap" style="width: auto;">
+        <video class="d-block w-100 object-fit-cover" autoplay muted loop id="myVideo" style="opacity: 1;">
+        <source src="../image/bg.3e78e80.mp4" type="video/mp4">
+        </video>    
+        </div>
+
+        <div class="poster_sign">
+            <div class="poster_video-entry">
+                <button class="poster_video">
+                    asd
+                </button>
+            </div>
+            <p class="poster_sub">Chính thức ra mắt trên nhiều nền tảng, đến tải ngay
+            </p>
+            <div class="download">
+                <div class="qr-download_item-btn">
+                    <p class="qr-download_item-btn" style="margin-bottom: 0; height: auto;">
+                    <img src="../image/qr-download_btn.png" alt="" height="114px">
+                    </p>
+                </div>
+                <div class="download_item-btn">
+                        <div class="download_item-btn-row download-layout-btn margin">
+                            <span class="download_item-btn-row download-layout-btn" style="object-fit: cover;">
+                                <img src="../image/ps4-ps5-download_btn.png" alt="" height="auto">
+                            </span>
+                            <span class="download_item-btn-row download-layout-btn" style="object-fit: cover;">
+                                <img src="../image/pc-download_btn.png" alt="">
+                            </span>
+                        </div>
+                        <div class="download_item-btn-row download-layout-btn">
+                            <span class="download_item-btn-row download-layout-btn" style="object-fit: cover;">
+                                <img src="../image/ios-download_btn.png" alt="">
+                            </span>
+                            <span class="download_item-btn-row download-layout-btn" style="object-fit: cover;">
+                                <img src="../image/android-download_btn.png" alt="">
+                            </span>
+                            <span class="download_item-btn-row download-layout-btn none-margin" style="object-fit: cover;">
+                                <img src="../image/epic-store-download_btn.png" alt="">
+                            </span>
+                        </div>
+                </div>
+                <div class="warning_itemshow-img-tag" style="object-fit: cover;">
+                    <img src="../image/warning-tag_btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-arrows">
+            <div class="poster-arrows-down-layout poster_arrow-1">
+                <img src="../image/arrow-down.png" alt="">
+            </div>
+            <div class="poster-arrows-down-layout poster_arrow-2">
+                <img src="../image/arrow-down.png" alt="">
+            </div>
+            <div class="poster-arrows-down-layout poster_arrow-3">
+                <img src="../image/arrow-down.png" alt="">
+            </div>
+        </div>
+
+        <section class="news">
+            <h3>
+                Tin Tức
+            </h3>
+        <div class="news-content_slider">
+            <div class="slider">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner" style="width: 45%;">
+                      <div class="carousel-item active">
+                        <img src="../image/news-img_slider_slide-1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../image/news-img_slider_slide-2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../image/news-img_slider_slide-3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../image/news-img_slider_slide-4.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-content">
+                <ul class="news__tab__list">
+                <li class="news__tab__item news__tab__item--active custom-cursor-on-hover">
+                    Mới
+                </li>
+                </ul>
+                <ul class="news-list">
+                    <li>
+                        <a href="" class="news_item">
+                            <p class="news_title">Giới Thiệu Sự Kiện "Hồi Tưởng Rèn Luyện - Thích Thú"</p>
+                            <p class="news_date">16/10/2024</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="news_item">
+                            <p class="news_title">[Genshin Impact] Hoạt Cảnh - Ngọn Lửa Bất Diệt</p>
+                            <p class="news_date">15/10/2024</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="news_item">
+                            <p class="news_title">[Genshin Impact] Hoạt Cảnh - Trước Lúc Bình Minh</p>
+                            <p class="news_date">11/10/2024</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="news_item">
+                            <p class="news_title">Giới Thiệu Sự Kiện "Truy Tìm Kho Báu Loài Bọ"</p>
+                            <p class="news_date">09/10/2024</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="news_item">
+                            <p class="news_title">Giới Thiệu Cập Nhật Phiên Bản 5.1 "Cầu Vồng Định Sẵn Sẽ Cháy"</p>
+                            <p class="news_date">09/10/2024</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="news-more">
+                    Tải thêm
+                </a>
+            </div>
+        </div>
+        </section>
+
+        <section class="cities">
+            <ul class="cities-list">
+                <li class="city-btn-item city_hover city-Mondstadt">
+                    <div class="city_banner mond-city" style="background-image: url(../image/mondstard-city.jpg); height: 260px; width: auto;"></div>
+                    <a href="" class="city-text__name">
+                        <p>
+                            Mondstadt
+                        </p>
+                    </a>
+                    <div class="city_char mondstadt-char" style="background-image: url(../image/mondstard-city-character.png);"></div>
+                </li>
+                <li class="city-btn-item city_hover city-Liyue">
+                    <div class="city_banner liyue-city" style="background-image: url(../image/liyue-city.jpg); height: 260px; width: auto;"></div>
+                    <a href="" class="city-text__name">
+                        <p>
+                            Liyue    
+                        </p>
+                    </a>
+                    <div class="city_char liyue-char" style="background-image: url(../image/liyue-city-character.png);"></div>
+                </li>
+                <li class="city-btn-item city_hover city-Inazuma">
+                    <div class="city_banner inazuma-city" style="background-image: url(../image/inazuma-city.jpg); height: 260px; width: auto;"></div>
+                    <a href="" class="city-text__name">
+                        <p>
+                            Inazuma    
+                        </p>
+                    </a>
+                    <div class="city_char inazuma-char" style="background-image: url(../image/inazuma-city-character.png);"></div>
+                </li>
+                <li class="city-btn-item city_hover city-Sumeru">
+                    <div class="city_banner sumeru-city" style="background-image: url(../image/sumeru-city.jpg); height: 260px; width: auto;"></div>
+                    <a href="" class="city-text__name">
+                        <p>
+                            Sumeru
+                        </p>
+                    </a>
+                    <div class="city_char sumeru-char" style="background-image: url(../image/sumeru-city-character.png);"></div>
+                </li>
+                <li class="city-btn-item city_hover city-Fontaine">
+                    <div class="city_banner fontaine-city" style="background-image: url(../image/fontaine-city.png); height: 260px; width: auto;"></div>
+                    <a href="" class="city-text__name">
+                        <p>
+                            Fontaine
+                        </p>
+                    </a>
+                    <div class="city_char fontaine-char" style="background-image: url(../image/fontaine-city-character.png);"></div>
+                </li>
+                <li class="city-btn-item city_hover city-Natlan">
+                    <div class="city_banner natlan-city" style="background-image: url(../image/natlan-city.jpg); height: 260px; width: auto;"></div>
+                    <a href="" class="city-text__name">
+                        <p>
+                            Natlan
+                        </p>
+                    </a>
+                    <div class="city_char natlan-char" style="background-image: url(../image/natlan-city-character.png);"></div>
+                </li>
+                <li class="city-btn-item city_hover-disabled">
+                    <div class="city_banner disabled-city" style="background-image: url(../image/disabled-city.jpg); height: 260px; width: auto; cursor: none;"></div>
+                        <p class="city-text__name">
+                            Vui lòng đợi
+                        </p>
+                </li>
+            </ul>
+        </section>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="me-media-icon" style="justify-content: flex-start;"> <div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Twitter" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80">
+                    <g id="icomoon-ignore">
+                    </g>
+                    <path fill="#999" d="M43.969 36.923l13.507-15.582h-3.2l-11.728 13.53-9.366-13.53h-10.804l14.165 20.46-14.165 16.34h3.2l12.385-14.288 9.892 14.288h10.804l-14.69-21.218zM39.585 41.981l-12.854-18.249h4.916l22.629 32.126h-4.916l-9.775-13.878z" class="icon-path-Twitter"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">X</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-TikTok" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80">
+                    <title>TikTok</title>
+                    <path d="M56.397 36.63c-0.011 0-0.024 0-0.038 0-3.36 0-6.468-1.077-8.998-2.906l0.045 0.032v13.087c-0.003 6.571-5.331 11.898-11.903 11.898-6.574 0-11.903-5.328-11.903-11.903s5.328-11.903 11.903-11.903c0.577 0 1.144 0.040 1.697 0.12l-0.064-0.007v6.581c-0.49-0.16-1.054-0.252-1.639-0.252-3.018 0-5.464 2.446-5.464 5.464s2.446 5.464 5.464 5.464c3.018 0 5.464-2.446 5.464-5.464 0 0 0 0 0 0v0-25.583h6.443c0 0.022 0 0.047 0 0.073 0 0.548 0.049 1.084 0.144 1.605l-0.009-0.055c0.476 2.479 1.919 4.552 3.914 5.853l0.035 0.022c1.38 0.924 3.077 1.475 4.904 1.475 0 0 0.002 0 0.002 0v0z" fill="#999" class="icon-path-TikTok"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">TikTok</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Youtube" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80">
+                    <title>YouTube</title>
+                    <path d="M60.042 31.82c0 0-0.4-2.819-1.629-4.058-1.558-1.629-3.299-1.637-4.098-1.733-5.719-0.415-14.307-0.415-14.307-0.415h-0.015c0 0-8.588 0-14.307 0.415-0.799 0.096-2.54 0.104-4.098 1.733-1.231 1.238-1.622 4.058-1.622 4.058s-0.408 3.308-0.408 6.622v3.099c0 3.307 0.408 6.622 0.408 6.622s0.4 2.819 1.622 4.058c1.558 1.629 3.603 1.574 4.513 1.75 3.276 0.312 13.907 0.408 13.907 0.408s8.595-0.015 14.315-0.423c0.799-0.096 2.541-0.104 4.098-1.733 1.229-1.238 1.629-4.058 1.629-4.058s0.408-3.307 0.408-6.622v-3.099c-0.008-3.308-0.415-6.622-0.415-6.622zM35.775 45.304v-11.495l11.048 5.768-11.048 5.727z" fill="#999" class="icon-path-Youtube"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">YouTube</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Facebook" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80" class="custom-cursor-on-hover">
+                    <title>Facebook</title>
+                    <path d="M44.278 26.336h6.577v-7.854h-6.577c-5.044 0-9.194 4.086-9.194 9.194v3.959h-5.236v7.854h5.236v20.943h7.854v-21.007h6.577l1.341-7.854h-7.917v-3.959c0-0.702 0.575-1.277 1.341-1.277z" fill="#999" class="icon-path-Facebook"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">Facebook</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Instagram" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80">
+                    <title>Instagram</title>
+                    <path d="M40.291 24.010c5.117 0 5.698 0 7.733 0.116 1.86 0.058 2.849 0.407 3.547 0.639 0.872 0.349 1.512 0.756 2.209 1.453s1.105 1.279 1.453 2.209c0.232 0.698 0.581 1.686 0.639 3.547 0.116 2.035 0.116 2.616 0.116 7.733s0 5.698-0.116 7.733c-0.058 1.86-0.407 2.849-0.639 3.547-0.349 0.872-0.756 1.512-1.453 2.209s-1.279 1.105-2.209 1.453c-0.698 0.232-1.686 0.581-3.547 0.639-2.035 0.116-2.616 0.116-7.733 0.116s-5.698 0-7.733-0.116c-1.86-0.058-2.849-0.407-3.547-0.639-0.872-0.349-1.512-0.756-2.209-1.453s-1.105-1.279-1.453-2.209c-0.232-0.698-0.581-1.686-0.639-3.547-0.116-2.035-0.116-2.616-0.116-7.733s0-5.698 0.116-7.733c0.058-1.86 0.407-2.849 0.639-3.547 0.349-0.872 0.756-1.512 1.453-2.209s1.279-1.105 2.209-1.453c0.698-0.232 1.686-0.581 3.547-0.639 2.035-0.058 2.616-0.116 7.733-0.116zM40.291 20.58c-5.175 0-5.814 0-7.85 0.116s-3.43 0.407-4.651 0.872c-1.279 0.465-2.326 1.163-3.372 2.209s-1.744 2.151-2.209 3.372c-0.465 1.221-0.814 2.616-0.872 4.651-0.116 2.035-0.116 2.675-0.116 7.907s0 5.814 0.116 7.85c0.116 2.035 0.407 3.43 0.872 4.651 0.465 1.279 1.163 2.326 2.209 3.372s2.151 1.744 3.372 2.209c1.221 0.465 2.616 0.814 4.651 0.872 2.035 0.116 2.675 0.116 7.85 0.116s5.814 0 7.85-0.116c2.035-0.116 3.43-0.407 4.651-0.872 1.279-0.465 2.326-1.163 3.372-2.209s1.744-2.151 2.209-3.372c0.465-1.221 0.814-2.616 0.872-4.651 0.116-2.035 0.116-2.675 0.116-7.85s0-5.814-0.116-7.85c-0.116-2.035-0.407-3.43-0.872-4.651-0.465-1.279-1.105-2.326-2.209-3.372-1.046-1.046-2.151-1.744-3.372-2.209s-2.616-0.814-4.651-0.872c-2.035-0.116-2.675-0.175-7.85-0.175 0 0 0 0 0 0zM40.291 29.883c-5.407 0-9.826 4.419-9.826 9.826s4.419 9.826 9.826 9.826 9.826-4.419 9.826-9.826-4.419-9.826-9.826-9.826zM40.291 46.047c-3.489 0-6.338-2.849-6.338-6.338s2.849-6.338 6.338-6.338 6.338 2.849 6.338 6.338-2.849 6.338-6.338 6.338zM52.792 29.476c0 1.279-1.046 2.268-2.268 2.268s-2.268-1.046-2.268-2.268 0.988-2.268 2.209-2.268 2.326 1.046 2.326 2.268z" fill="#999" class="icon-path-Instagram"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">Instagram</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-HoYoLAB" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 80 80" fill="none" class="custom-cursor-on-hover">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.246 63.8787C25.0962 61.886 24.2777 59.1786 24.2777 55.5007C24.2777 54.5567 24.3765 52.6956 24.6195 50.4113C23.6038 48.3744 21.9014 46.7306 19.7747 45.8074L19.6866 45.7691C18.533 45.2683 18.3504 43.6953 19.3582 42.9394L21.1656 41.5835C22.6853 40.4435 23.6811 38.73 23.9248 36.8357L24.0341 35.9862C24.2779 34.0911 26.8448 33.7299 27.5936 35.4854L27.887 36.1732C28.9069 33.9276 30.189 32.2704 31.7883 31.8013C33.162 31.3984 34.0271 33.3483 34.8047 35.101L34.8054 35.1027C34.86 35.2258 34.9144 35.3484 34.9683 35.4687C36.5828 34.2829 39.1757 33.0984 42.8462 32.6204C45.4508 32.2812 47.353 32.3699 48.7071 32.6984C49.7807 30.6408 51.6576 27.9372 53.6388 26.9197C57.1696 25.1064 58.1016 28.3043 58.9734 31.2958C59.4118 32.8001 59.835 34.2523 60.5659 34.9888C61.9706 36.4043 64.6351 39.1383 66.169 40.8827C65.7845 26.7629 54.2176 15.4347 40.0049 15.4347C25.5495 15.4347 13.831 27.1532 13.831 41.6087C13.831 51.0167 18.7947 59.2653 26.246 63.8787ZM54.8959 30.7097C55.2296 30.4051 55.6628 29.9292 55.4602 29.4495C55.2284 28.9007 54.4015 28.8665 53.7471 29.3682C52.2759 30.4963 51.5551 32.3788 51.4131 33.8487C51.3599 34.3996 51.5247 34.7597 51.9434 34.8257C52.362 34.8917 52.6238 34.5614 52.7697 34.1753C53.5468 32.119 54.187 31.3569 54.8959 30.7097ZM35.5033 38.6456C34.797 39.6182 35.2733 40.5619 36.1007 40.7533C41.8509 38.8984 47.9864 38.1378 48.7616 38.0662C49.5137 37.9967 49.6075 36.9306 49.31 36.2142C49.0124 35.4979 47.3757 34.6314 42.9746 35.2756C38.5735 35.9198 36.2095 37.673 35.5033 38.6456ZM49.1325 60.2072C57.0223 58.0724 60.7369 53.9441 59.7317 50.2133C57.9311 43.5307 50.148 41.513 42.9663 43.6058C35.0091 45.9246 32.1224 51.9154 33.5147 56.9967C35.3069 63.5371 42.3858 62.0327 49.1325 60.2072ZM26.5706 38.1757C26.3823 37.7617 25.7787 37.8329 25.6903 38.2796L25.5842 38.8162C25.228 40.6165 24.1894 42.2056 22.6892 43.2453L21.8926 43.7974C21.5839 44.0114 21.6391 44.4866 21.9884 44.6228L22.4364 44.7976C24.3984 45.5629 25.9141 47.1789 26.5628 49.1972L27.1589 51.0517C27.316 51.5404 28.0255 51.4567 28.0664 50.9446L28.2361 48.8212C28.3968 46.8101 29.4045 44.965 31.0039 43.7531L31.3233 43.5111C31.6086 43.2949 31.5568 42.8487 31.2297 42.7048L30.4258 42.3512C28.8508 41.6584 27.5841 40.4046 26.8678 38.8293L26.5706 38.1757ZM25.1451 44.6342C25.8098 44.3438 26.268 43.7293 26.5255 43.3191C26.6655 43.0961 26.7733 42.8888 26.8464 42.7372C27.1086 42.1929 27.1159 41.5624 26.5 41.2979C25.8421 41.0154 25.5185 41.5823 25.2314 42.0854L25.2314 42.0854L25.2314 42.0854C25.1805 42.1747 25.1307 42.2619 25.0804 42.342C24.866 42.6835 24.6443 42.9109 24.4758 42.9845C24.0369 43.1763 23.8308 43.7011 24.0157 44.1567C24.2005 44.6122 24.7062 44.826 25.1451 44.6342ZM52.1476 47.6257C52.573 48.2529 52.5029 49.09 51.9083 49.5567L51.9047 49.5596L51.8873 49.5733C51.8713 49.5862 51.8464 49.6061 51.8142 49.6324C51.7495 49.685 51.6557 49.7626 51.5432 49.8589C51.316 50.0534 51.023 50.3154 50.7439 50.5967C50.6414 50.7 50.5464 50.8002 50.4606 50.8958C50.5852 50.9248 50.7199 50.9524 50.8625 50.9781C51.2509 51.0482 51.6398 51.0945 51.9364 51.1232C52.0833 51.1375 52.2043 51.1471 52.2871 51.1531C53.0614 51.209 53.7413 51.7692 53.6973 52.6082C53.6574 53.3673 53.0145 53.9501 52.2619 53.9099C52.0661 53.8989 51.8705 53.8824 51.6753 53.8635C51.3343 53.8304 50.867 53.7755 50.3817 53.6879C49.9098 53.6027 49.3577 53.4758 48.8757 53.28C48.6349 53.1821 48.3589 53.0463 48.1076 52.8528C47.8621 52.6637 47.5467 52.3468 47.3969 51.865C47.247 51.3832 47.3264 50.9414 47.4209 50.6447C47.5175 50.3412 47.6671 50.0707 47.8094 49.8517C48.0941 49.4133 48.4755 48.9911 48.8146 48.6493C49.2537 48.2069 49.722 47.746 50.2321 47.3841C50.8478 46.9473 51.7304 47.0106 52.1476 47.6257ZM40.7664 49.3267C41.6159 49.2361 42.3774 49.8572 42.4673 50.7139C42.6221 52.1901 42.9927 53.747 43.7094 54.8178C44.1873 55.5319 44.0007 56.5015 43.2927 56.9835C42.5846 57.4655 41.6232 57.2773 41.1453 56.5632C40.0034 54.857 39.5636 52.6882 39.391 51.0421C39.3011 50.1854 39.9169 49.4174 40.7664 49.3267Z" fill="#999" class="icon-path-HoYoLAB"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">HoYoLAB</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Discord" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80" class="custom-cursor-on-hover">
+                    <title>Discord</title>
+                    <path d="M55.91 25.549c-3.028-1.405-6.199-2.378-9.442-2.919-0.433 0.793-0.864 1.621-1.225 2.451-3.459-0.54-7.027-0.54-10.488 0-0.36-0.83-0.757-1.658-1.225-2.451-3.279 0.54-6.451 1.55-9.478 2.919-5.946 8.865-7.568 17.479-6.776 25.984v0c3.495 2.595 7.424 4.542 11.605 5.839 0.937-1.261 1.767-2.595 2.487-4.001-1.37-0.504-2.667-1.117-3.929-1.874 0.324-0.253 0.65-0.47 0.973-0.721 7.351 3.459 15.858 3.459 23.172 0 0.324 0.253 0.648 0.504 0.973 0.721-1.261 0.721-2.558 1.37-3.929 1.874 0.721 1.405 1.55 2.739 2.487 4.001 4.181-1.261 8.108-3.244 11.605-5.803v0c0.937-9.911-1.621-18.453-6.811-26.020zM32.413 46.307c-2.271 0-4.145-2.054-4.145-4.577s1.802-4.577 4.109-4.577 4.181 2.054 4.145 4.577-1.838 4.577-4.109 4.577zM47.621 46.307c-2.271 0-4.109-2.054-4.109-4.577s1.802-4.577 4.109-4.577 4.145 2.054 4.109 4.577-1.802 4.577-4.109 4.577z" fill="#999" class="icon-path-Discord"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">Discord</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Reddit" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80" class="custom-cursor-on-hover">
+                    <title>Reddit</title>
+                    <path d="M59.007 38.939c0 1.655-0.933 3.076-2.313 3.776 0.169 0.658 0.255 1.337 0.255 2.036 0 6.703-7.573 12.134-16.907 12.134-9.313 0-16.885-5.431-16.885-12.134 0-0.679 0.085-1.357 0.234-1.995-1.422-0.701-2.397-2.142-2.397-3.819 0-2.332 1.888-4.221 4.221-4.221 1.21 0 2.291 0.509 3.076 1.337 2.864-1.995 6.681-3.288 10.924-3.436l2.46-11.052c0.085-0.381 0.489-0.636 0.87-0.552l7.828 1.718c0.509-1.019 1.59-1.739 2.822-1.739 1.761 0 3.183 1.422 3.183 3.161 0 1.761-1.422 3.183-3.183 3.183-1.739 0-3.161-1.422-3.161-3.161l-7.086-1.571-2.207 10.013c4.264 0.127 8.125 1.4 11.009 3.395 0.764-0.807 1.846-1.294 3.034-1.294 2.332 0 4.221 1.888 4.221 4.221zM29.859 43.161c0 1.761 1.422 3.183 3.161 3.183 1.761 0 3.183-1.422 3.183-3.183 0-1.739-1.422-3.161-3.183-3.161-1.739 0-3.161 1.422-3.161 3.161zM47.043 50.691c0.318-0.318 0.318-0.785 0-1.103-0.297-0.297-0.785-0.297-1.082 0-1.273 1.294-4.009 1.739-5.961 1.739s-4.688-0.446-5.961-1.739c-0.297-0.297-0.785-0.297-1.082 0-0.318 0.297-0.318 0.785 0 1.103 2.015 2.015 5.898 2.164 7.043 2.164s5.028-0.149 7.043-2.164zM46.98 46.344c1.739 0 3.161-1.422 3.161-3.183 0-1.739-1.422-3.161-3.161-3.161-1.761 0-3.183 1.422-3.183 3.161 0 1.761 1.422 3.183 3.183 3.183z" fill="#999" class="icon-path-Reddit"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">Reddit</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Twitch" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80">
+                    <title>Twitch</title>
+                    <path fill="#999" d="M22.555 18.75l-2.854 7.294v29.814h10.149v5.392h5.709l5.392-5.392h8.247l11.101-11.101v-26.006h-37.744zM56.492 42.854l-6.343 6.343h-10.149l-5.392 5.392v-5.392h-8.564v-26.642h30.448v20.299zM50.149 29.851v11.089h-3.805v-11.089h3.805zM40 29.851v11.089h-3.805v-11.089h3.805z" class="icon-path-Twitch"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">Twitch</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-Messenger" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80" class="custom-cursor-on-hover">
+                    <title>Messenger</title>
+                    <path fill="#999" d="M40.058 13.751c-14.822 0-26.308 10.832-26.308 25.463 0 7.653 3.145 14.266 8.263 18.834 0.884 0.795 0.702 1.255 0.852 6.163 0.040 1.133 0.968 2.036 2.107 2.036 0.305 0 0.595-0.065 0.857-0.182l-0.014 0.005c5.6-2.466 5.672-2.661 6.622-2.403 16.225 4.466 33.811-5.918 33.811-24.454 0-14.631-11.369-25.463-26.191-25.463zM55.854 33.346l-7.726 12.233c-0.713 1.111-1.942 1.837-3.34 1.837-0.892 0-1.714-0.295-2.376-0.793l0.010 0.007-6.147-4.601c-0.262-0.198-0.593-0.318-0.953-0.318s-0.691 0.119-0.956 0.32l0.004-0.003-8.295 6.291c-1.107 0.839-2.557-0.487-1.811-1.658l7.726-12.233c0.712-1.111 1.941-1.837 3.34-1.837 0.892 0 1.715 0.295 2.376 0.794l-0.010-0.007 6.145 4.6c0.262 0.198 0.593 0.318 0.953 0.318s0.691-0.119 0.956-0.32l-0.004 0.003 8.299-6.285c1.105-0.845 2.555 0.481 1.809 1.653z" class="icon-path-Messenger"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">Messenger</div></div></div><div class="me-media-icon-box bottom custom-cursor-on-hover" style="width: 1em; margin: 0px 0.05em 0em;"><div class="me-media-icon-item media-icon-WhatsApp" style="width: 1em; height: 1em;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70" viewBox="0 0 80 80" class="custom-cursor-on-hover">
+                    <title>WhatsApp</title>
+                    <path fill="#999" d="M56.925 22.975c-4.49-4.496-10.461-6.973-16.824-6.975-13.111 0-23.781 10.669-23.786 23.783-0.002 4.192 1.094 8.284 3.175 11.891l-3.375 12.326 12.609-3.307c3.474 1.896 7.386 2.893 11.366 2.895h0.010c13.109 0 23.78-10.67 23.784-23.784 0.002-6.356-2.469-12.331-6.96-16.827v-0.001zM40.1 59.571h-0.008c-3.547-0.001-7.026-0.955-10.062-2.755l-0.722-0.429-7.483 1.963 1.997-7.296-0.47-0.748c-1.979-3.148-3.024-6.786-3.022-10.521 0.005-10.899 8.873-19.768 19.778-19.768 5.28 0.002 10.244 2.061 13.976 5.798 3.733 3.736 5.787 8.704 5.784 13.986-0.005 10.901-8.873 19.769-19.769 19.769v0.001zM50.944 44.765c-0.594-0.298-3.516-1.735-4.061-1.933s-0.941-0.298-1.337 0.298c-0.396 0.595-1.535 1.934-1.882 2.33-0.347 0.397-0.693 0.446-1.288 0.148s-2.509-0.925-4.78-2.949c-1.767-1.576-2.96-3.522-3.306-4.117s-0.036-0.917 0.26-1.212c0.267-0.267 0.594-0.695 0.892-1.041s0.396-0.595 0.594-0.991c0.198-0.397 0.099-0.744-0.049-1.041s-1.337-3.223-1.833-4.412c-0.482-1.159-0.973-1.001-1.337-1.021-0.347-0.017-0.742-0.021-1.139-0.021s-1.040 0.148-1.585 0.744c-0.545 0.595-2.080 2.033-2.080 4.958s2.129 5.751 2.427 6.148c0.298 0.397 4.191 6.399 10.152 8.974 1.418 0.612 2.525 0.978 3.388 1.252 1.423 0.453 2.719 0.389 3.743 0.236 1.142-0.171 3.516-1.438 4.011-2.826s0.495-2.579 0.347-2.826c-0.148-0.248-0.545-0.397-1.139-0.695l0.001-0.002z" class="icon-path-WhatsApp"></path>
+                    </svg></div> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.3em; padding: 0.5em; color: rgb(153, 153, 153);">WhatsApp</div></div></div> </div>
+            </div>
+            <hr style="color: #fff;">
+            <div class="footer-follow">
+                <div class="footer-jc">
+                    <div class="footer-left">
+                        <div class="footer-text text-upper">
+                            Theo Dõi Thông Tin Mới Nhất
+                        </div>
+                        <div class="footer-text text-lower">
+                            Theo dõi thông tin chính thức của Genshin Impact, cập nhật những tin tức mới nhất, <br> thông tin nhân vật và phúc lợi sự kiện hạn giờ từ Paimon.
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="ft-cb-tb">
+                            <input type="text" placeholder="Email" required id="textbox-email">
+                            <label class="ft-r-w30">
+                                <div>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="footer-text" style="width: 100%;">
+                                    Đã đồng ý thu thập và sử dụng dữ liệu cá nhân để nhận lời mời sự kiện và thông tin trò chơi khác. <a href="#" id="click_trans">Xem chi tiết >></a>
+                                </div>
+                            </label>
+                        </div>
+                        <div style="flex: 0 0 26%;">
+                        <button class="button button-item">
+                            <span class="button-bg">
+                                <!-- <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+                                <span class="button-bg-layer button-bg-layer-2 -turquoise"></span> -->
+                                <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+                            </span>
+                            <span class="button-inner">
+                                Theo dõi ngay
+                              <!-- <span class="button-inner-static">Theo dõi ngay</span>
+                              <span class="button-inner-hover">Theo dõi ngay</span> -->
+                            </span>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="logo-footer" style="text-align: center; object-fit: cover;">
+                    <img src="../image/logo-genshin_footer.png" alt="" height="70px" width="140px">
+                </div>
+                <div class="ftt-sp-lg">
+                    <div class="footer-text">
+                    <a href="">Chính Sách Về Quyền Riêng Tư</a>
+                    <a href="">Điều Khoản Dịch Vụ</a>
+                    <a href="">Giới Thiệu Công Ty</a>
+                    <a href="">Trung Tâm Trợ Giúp</a>
+                    </div>
+                </div>
+                <div class="ftt-logo-bp" style="text-align: center;">
+                    <div style="display: inline-flex; gap: 10px;">
+                        <div style="object-fit: cover; text-align: center; align-self: center;">
+                            <img src="../image/hhgames-logo.png" alt="" height="70px" width="70px">
+                        </div>
+                        <div style="object-fit: cover; text-align: center;">
+                            <img src="../image/funtap-logo.png" alt="" height="60px" width="140px">
+                        </div>
+                        <div style="object-fit: cover; text-align: center;">
+                            <img src="../image/warning-age.png" alt="" height="70px" width="50px">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-text ft-copyright">
+                    <p>
+                        Hotline: 1900 636 452
+                    </p>
+                    <p>
+                        Email: genshincs_vn@hoyoverse.com
+                    </p>
+                    <p>
+                        Funtap security : Infosec@funtap.vn
+                    </p>
+                    <p>
+                        Bản quyền © 2022 Funtap.
+                    </p>
+                    <p>
+                        Chơi quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe
+                    </p>
+                    <p>
+                        Quyết định phê duyệt nội dung kịch bản số: 1454/QĐ-BTTTT cấp ngày 07/08/2023
+                    </p>
+                    <p>
+                        Người chịu trách nhiệm nội dung: Ông Hoàng Quý Dương
+                    </p>
+                    <p>
+                        Tầng 4 - Tòa nhà Tây Hà - 19 Tố Hữu - Phường Trung Văn - Quận Nam Từ Liêm - Hà Nội
+                    </p>
+                    <p style="white-space: 5px; line-height: 5px;"> - </p>
+                    <p>
+                        <span>
+                            "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                        </span>
+                    </p>
+                    <p>
+                        <span style="text-align: center;">
+                            Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
+                        </span>
+                    </p>
+                </div>
+                <div class="ft-hoyoverse_logo">
+                    <img src="../image/hoyoverse-logo_white.png" alt="" height="55px">
+                </div>
+                <div class="footer-text ft-copyright" style="color: #fff;">
+                    Copyright © COGNOSPHERE. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+        <div class="social"></div>
+    </div>
+</div>
+</body>
+</html>

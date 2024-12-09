@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.register-modal {
+    background-color: #fff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.register-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.verification-group {
+    display: flex;
+}
+
+.verification-group input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.send-code {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ddd;
+    color: #999;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+    transform: scale(1.2);
+    margin-top: 3px;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ddd;
+    color: #999;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.options {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.options a {
+    color: #f0b90b;
+    text-decoration: none;
+}
+
+.alternative-login {
+    margin-top: 20px;
+}
+
+.alternative-login p {
+    font-size: 12px;
+    color: #999;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+</style>
+
+<body>
+    <div class="register-modal">
+        <div class="register-header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <button class="close-btn">&times;</button>
+        </div>
+        <h2>Đăng Ký</h2>
+        <form class="register-form">
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group verification-group">
+                <input type="text" placeholder="Mã Xác Nhận" required>
+                <button type="button" class="send-code">Gửi</button>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Vui lòng nhập mật khẩu" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Vui lòng nhập lại mật khẩu" required>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Tôi đã đọc và đồng ý <a href="#">Điều Khoản Dịch Vụ</a> & <a href="#">Chính Sách Về Quyền Riêng Tư</a></label>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="marketing">
+                <label for="marketing">Đồng ý đăng ký nhận email thông tin khuyến mãi (Không bắt buộc)</label>
+            </div>
+            <button type="submit" class="register-button">Đăng Ký</button>
+            <div class="options">
+                <span>Đã có tài khoản? <a href="#">Đăng Nhập</a></span>
+            </div>
+        </form>
+        <div class="alternative-login">
+            <p>Đăng nhập bằng phương thức khác</p>
+            <div class="social-icons">
+                <img src="google-icon.png" alt="Google">
+                <img src="apple-icon.png" alt="Apple">
+                <img src="facebook-icon.png" alt="Facebook">
+                <img src="twitter-icon.png" alt="Twitter">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.querySelector('.close-btn').addEventListener('click', () => {
+    document.querySelector('.register-modal').style.display = 'none';
+});
+</script>
+
+</html>
