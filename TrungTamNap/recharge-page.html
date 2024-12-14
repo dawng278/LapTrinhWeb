@@ -15,10 +15,10 @@
             <img src="../image/hoyoverse-logo.png" alt="Hoyoverse Logo">
             <span>| Trung Tâm Nạp</span>
             </div>
-            <div class="cart-icon header-right">
-                <a href="../cart.html">🛒</a>
+            <div class="icon-cart header-right">
+                <a href="#" id="open-cart">🛒</a>
                 <button class="btn-login">
-                    <a href="#git" class="login-link" id="open-login">Đăng Nhập</a>
+                    <a href="#" class="login-link" id="open-login">Đăng Nhập</a>
                 </button>
             </div>
         </div>
@@ -30,37 +30,39 @@
         <div id="cart-modal" class="cart-modal">
             <button class="close-btn">&times;</button>
             <div class="cart-header">
-                <img src="../image/hoyoverse-logo.png" alt="Logo" class="logo">
+                <!-- <img src="../image/hoyoverse-logo.png" alt="Logo" class="logo" height="30%" width="15%"> -->
+                <h1>Giỏ Hàng</h1>
+                <hr>
             </div>
-            <h2>Đăng Nhập Tài Khoản</h2>
-            <form class="cart-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Tên Người Dùng/Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Mật Khẩu" required>
-                </div>
-                <button type="submit" class="login-button">Đăng Nhập</button>
-                <button class="btn-register" style="visibility: hidden; margin: -2rem;"><a href="#" id="open-register">Đăng Ký</a></button>
-                <div class="options">
-                    <a href="#" class="help-link">Gặp Khó Khăn</a>
-                    <a href="#" id="switch-to-register">Đăng Ký Ngay</a>
-                </div>
-            </form>
-            <div class="alternative-login">
-                <table><tr>
-                    <td style="width:20%;"><hr/></td>
-                    <td style="vertical-align:middle; text-align: center">Đăng nhập bằng phương thức khác</td>
-                    <td style="width:20%"><hr/></td>
-                    </tr></table>
-                <!-- <p></p><hr style="position: absolute;"> -->
-                <div class="social-icons">
-                    <img src="../image/google-icon.png" alt="Google">
-                    <img src="../image/apple-icon.png" alt="Apple">
-                    <img src="../image/facebook-icon.png" alt="Facebook">
-                    <img src="../image/twitter-icon.png" alt="Twitter">
+            <div class="cart-content">
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <!-- <img src="../image/product1.png" alt="Sản phẩm 1" class="item-image">
+                        <div class="item-details">
+                            <h3 class="item-name">Tên Sản Phẩm 1</h3>
+                            <p class="item-price">Giá: 500.000₫</p>
+                            <div class="item-quantity">
+                                <button class="quantity-btn decrease">-</button>
+                                <input type="number" value="1" class="quantity-input">
+                                <button class="quantity-btn increase">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item">&times;</button> -->
+                        <h1 style="opacity: 0.2;">Bạn hiện chưa có mặt hàng nào trong giỏ</h1>
+                        <img src="../image/paimon.png" class="paimon" alt="" height="40%" width="20%" style="opacity: 0.2;">
+                    </li>
+                </ul>
+                <div class="cart-footer">
+                    <div class="">
+                        <p class="total-price">Tổng tiền: </p>
+                    </div>
+                    <div class="">
+                        <button class="checkout-button">Thanh Toán</button>
+                        <button class="continue-shopping-button">Tiếp Tục Mua Sắm</button>
+                    </div>
                 </div>
             </div>
+            
         </div>
 
         <div id="login-modal" class="login-modal">
@@ -149,9 +151,9 @@
         <div class="account-info">
             <h2 class="section-title">Tài khoản nạp</h2>
             <div class="section-info">
-            <p><strong>Máy chủ:</strong> \< Server-id > </p>
-            <p><strong>ID nhân vật:</strong> \< Player-id > </p>
-            <p><strong>Tên nhân vật:</strong> \< Player-name > </p>
+            <p><strong>Máy chủ:</strong> ${server.id} </p>
+            <p><strong>ID nhân vật:</strong> ${player.id} </p>
+            <p><strong>Tên nhân vật:</strong> ${player.name} </p>
             </div>
         </div>
 
@@ -202,7 +204,7 @@
                         <h4>Nhật Ký Hành Trình Trân Châu</h4>
                         <div class="price">
                             <button onclick="addToCart('Nhật Ký Hành Trình Trân Châu')" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -212,7 +214,7 @@
                         <h4>Bài Ca Trân Châu</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                 </div>
@@ -228,7 +230,7 @@
                         <h4>Không Nguyệt Chúc Phúc</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                 </div>
@@ -244,7 +246,7 @@
                         <h4>Đá Sáng Thế x60</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -253,7 +255,7 @@
                         <h4>Đá Sáng Thế x300</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -262,7 +264,7 @@
                         <h4>Đá Sáng Thế x980</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -271,7 +273,7 @@
                         <h4>Đá Sáng Thế x1980</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -282,7 +284,7 @@
                         <h4>Đá Sáng Thế x3280</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -293,7 +295,7 @@
                         <h4>Đá Sáng Thế x6480</h4>
                         <div class="price">
                             <button onclick="addToCart()" class="add-to-cart">Thêm vào giỏ hàng</button>
-                            <button class="buy-now">449.000 ₫</button>
+                            <button class="buy-now">449000 ₫</button>
                         </div>
                         
                     </div>
