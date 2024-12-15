@@ -409,10 +409,7 @@ button.btn-register img {
 .content {
   position: relative;
   width: 1280px;
-  left: 50%;
-  margin-left: -640px;
   min-height: 1240px;
-  padding-bottom: 208px;
 }
 
 .recommend-news_list {
@@ -515,9 +512,201 @@ li {
   list-style-type: none;
 }
 
+@media screen and (max-height: 800px) {
+  .main-content {
+      background-size: auto 800px;
+  }
+}
+
+@media  screen and (max-height: 800px) {
+  .character_person { 
+    left: calc(50% - 504px);
+    height: 800px;
+  }
+}
+
+:root {
+  --primary-color: #e9d5aa;
+  --text-color: #ffffff;
+  --brown-bg: rgba(139, 116, 82, 0.8);
+  --dark-overlay: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+  width: 100%;
+  background: url('../../image/mondstadt-bg1.jpg') no-repeat;
+  background-size: cover;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: var(--background-overlay);
+  padding: 15px;
+  backdrop-filter: blur(5px);
+  padding-top: 200px;
+}
+
+.region-item {
+  color: var(--text-color);
+  padding: 12px 15px;
+  margin: 2px 0;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.region-item:before {
+  content: "♦";
+  color: var(--primary-color);
+  font-size: 10px;
+}
+
+.region-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 30px;
+  position: relative;
+}
+
+.character-title img {
+  width: 400px;
+}
+
+.voice-info {
+  background-color: var(--brown-bg);
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cv-text {
+  color: var(--text-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.cv-text:before {
+  content: "♦";
+  color: var(--primary-color);
+}
+
+.language-toggle {
+  background: var(--brown-bg);
+  border-radius: 12px;
+  padding: 2px 15px;
+  position: relative;
+}
+
+/* Character Selection Bar */
+.character-select {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.character-list {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.character_person {
+  position: absolute;
+  top: 0;
+  /* left: calc(50% - 63vh); */
+  width: auto;
+  height: 100vh;
+  opacity: 1;
+  /* transform: translateX(500px); */
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.character-infor {
+  position: absolute;
+  top: 20vh;
+  left: 20vh;
+}
+
+.character_icon {
+  border-radius: 8px;
+  overflow: hidden;
+  left: 15vh;
+  top: 10vh;
+  width: 30vh;
+  position: absolute;
+  opacity: 0.3;
+  transition: all 0.2s ease;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.nav-btn:hover {
+  color: white;
+}
+
+/* Character Description */
+.character-description {
+  background-color: var(--dark-overlay);
+  padding: 20px 25px;
+  max-width: 500px;
+  height: 15vh;
+  overflow: auto;
+  text-align: left;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.character-description {
+  overflow-y: auto;
+  max-height: 500px; /* or any height */
+  
+  /* Hide scrollbar for Chrome/Safari/Opera */
+  &::-webkit-scrollbar {
+      width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+  }
+}
+
+.character-quote {
+  position: absolute;
+  left: 15vh;
+}
+
+
 .footer {
   background-color: #111;
   width: 100%;
+  z-index: 1;
 }
 
 .footer-top {
