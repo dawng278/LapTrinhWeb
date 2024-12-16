@@ -39,26 +39,25 @@
                 </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 66px; margin-left: -5rem;"> <!--margin-top: 1.5rem; background-color: rgba(17, 17, 17, 0.75);-->
                     <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" href="../TrangChu/index.html">Trang Chủ</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="news.html">Tin Tức</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../NhanVat/character.html">Nhân Vật</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Tư Liệu
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Giới Thiệu Game</a></li>
-                          <li><a class="dropdown-item" href="#">Thế Giới</a></li>
-                          <li><a class="dropdown-item" href="#">Tạp Chí</a></li>
-                          <li><a class="dropdown-item" href="#">Truyện Tranh</a></li>
-                        </ul>
-                      </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="../../trang-chu/index.html">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../../tin-tuc/news.html">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="character.html">Nhân Vật</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../tin-tuc/news.html">Giới Thiệu Game</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../../trung-tam-nap/recharge-page.html">Trung Tâm Nạp</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Mã Quà</a>
+                        </li>
+                    </ul>
                       <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Khác
@@ -169,7 +168,7 @@
     
             <div class="content">
                 <div class="sidebar">
-                    <div class="region-item active">Mondstadt</div>
+                    <div class="region-item region-item-active">Mondstadt</div>
                     <div class="region-item">Liyue</div>
                     <div class="region-item">Inazuma</div>
                     <div class="region-item">Sumeru</div>
@@ -182,39 +181,64 @@
                     <div class="character-wraper">
                         <ul>
                             <li class="character-list">
-                                <img src="../../image/jean.png" alt="Jean" class="character_person">
-                                <img src="../../image/wind.png" alt="Wind" class="character_icon">
-                                <div class="character-infor">
+                                <img src="../../image/jean.png" alt="Jean" data-char="jean" class="character_person swiper-character-active">
+                                <img src="../../image/wind.png" alt="Wind" class="character_icon character_icon--active">
+                                <img src="../../image/light.f43c391.png" alt="" class="light-effect light-effect--active">
+                                <div class="character-infor character-infor--active">
                                     <div class="character-title">
                                         <img src="../../image/jean-name.png" alt="">
                                     </div>
-                                    <div class="voice-info">
+                                    <div class="voice-info ">
                                     <span class="cv-text">CV: SAITO Chiwa</span>
                                     <div class="language-toggle">
                                     <span>JP</span>
-                                    <label class="switch">
-                                    <input type="checkbox">
                                     <span class="slider"></span>
                                     </label>
                                     </div>
                                     </div>
                                     <!-- Character Description -->
-                    <div class="character-description">
-                        <p>Là quyền đội trưởng của Đội Kỵ Sĩ Tây Phong, Jean luôn cần mẫn làm việc, đem lại sự yên bình cho người dân.
-                            <br>
-                            Tuy rằng không có tài năng thiên phú vượt bậc, nhưng nhờ chăm chỉ luyện tập, hiện nay cô ấy không thua kém ai.
-                            Khi sự uy hiếp của Phong Ma Long ngày càng đến gần, vị quyền đội trưởng đáng tin tưởng này đã có sự chuẩn bị, thề phải bảo vệ Mondstadt.
-                        </p>
-                    </div>
-        
-                    <!-- Character Quote -->
-                    <div class="character-quote">
-                        <img src="../../image/jean_title.png" alt="">
-                    </div>
+                                <div class="character-description">
+                                    <p>Là quyền đội trưởng của Đội Kỵ Sĩ Tây Phong, Jean luôn cần mẫn làm việc, đem lại sự yên bình cho người dân.
+                                    <br>
+                                    Tuy rằng không có tài năng thiên phú vượt bậc, nhưng nhờ chăm chỉ luyện tập, hiện nay cô ấy không thua kém ai.
+                                    Khi sự uy hiếp của Phong Ma Long ngày càng đến gần, vị quyền đội trưởng đáng tin tưởng này đã có sự chuẩn bị, thề phải bảo vệ Mondstadt.
+                                    </p>
+                                </div>
+                                <!-- Character Quote -->
+                                <div class="character-quote">
+                                    <img src="../../image/jean_title.png" alt="">
+                                </div>
                                 </div>
                             </li>
                             <li class="character-list">
-
+                                <img src="../../image/amber.png" alt="Amber" data-char="amber" class="character_person">
+                                <img src="../../image/fire.png" alt="Wind" class="character_icon">
+                                <img src="../../image/light.f43c391.png" alt="" class="light-effect">
+                                <div class="character-infor">
+                                    <div class="character-title">
+                                        <img src="../../image/amber-name.png" alt="">
+                                    </div>
+                                    <div class="voice-info">
+                                    <span class="cv-text">CV: SAITO Chiwa</span>
+                                    <div class="language-toggle">
+                                    <span>JP</span>
+                                    <span class="slider"></span>
+                                    </label>
+                                    </div>
+                                    </div>
+                                    <!-- Character Description -->
+                                <div class="character-description">
+                                    <p>Là quyền đội trưởng của Đội Kỵ Sĩ Tây Phong, Jean luôn cần mẫn làm việc, đem lại sự yên bình cho người dân.
+                                    <br>
+                                    Tuy rằng không có tài năng thiên phú vượt bậc, nhưng nhờ chăm chỉ luyện tập, hiện nay cô ấy không thua kém ai.
+                                    Khi sự uy hiếp của Phong Ma Long ngày càng đến gần, vị quyền đội trưởng đáng tin tưởng này đã có sự chuẩn bị, thề phải bảo vệ Mondstadt.
+                                    </p>
+                                </div>
+                                <!-- Character Quote -->
+                                <div class="character-quote">
+                                    <img src="../../image/amber-title.png" alt="">
+                                </div>
+                                </div>
                             </li>
                             <li class="character-list">
 
@@ -278,19 +302,95 @@
         
                 <!-- Character Selection -->
                 <div class="character-select">
-                    <button class="nav-btn prev">&#8249;</button>
+                    <button class="nav-btn prev">
+                        <img src="../../image/swipe-btn-prev.png" alt="">
+                    </button>
                     <div class="character-list">
-                        <div class="character-icon active" data-char="jean">
-                            <img src="../jean.jpg" alt="Jean">
-                            <span>Jean</span>
+                        <div class="character-icon character-icon-active" data-char="jean">
+                            <img src="../../image/jean-avt.png" alt="Jean">
+                            <p>Jean</p>
                         </div>
                         <div class="character-icon" data-char="amber">
-                            <img src="../amber.jpg" alt="Amber">
-                            <span>Amber</span>
+                            <img src="../../image/amber-avt.png" alt="Amber">
+                            <p>Amber</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/lisa-avt.png" alt="Amber">
+                            <p>Lisa</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/kaeya-avt.png" alt="Amber">
+                            <p>Kaeya</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/barbara-avt.png" alt="Amber">
+                            <p>Barbara</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/diluc-avt.png" alt="Amber">
+                            <p>Diluc</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/razor-avt.png" alt="Amber">
+                            <p>Razor</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/venti-avt.png" alt="Amber">
+                            <p>Venti</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/klee-avt.png" alt="Amber">
+                            <p>Klee</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/bennett-avt.png" alt="Amber">
+                            <p>Bennett</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/noelle-avt.png" alt="Amber">
+                            <p>Noelle</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/fischl-avt.png" alt="Amber">
+                            <p>Fischl</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/sucrose-avt.png" alt="Amber">
+                            <p>Sucrose</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/mona-avt.png" alt="Amber">
+                            <p>Mona</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/diona-avt.png" alt="Amber">
+                            <p>Diona</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/albedo-avt.png" alt="Amber">
+                            <p>Albedo</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/rosaria-avt.png" alt="Amber">
+                            <p>Rosaria</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/eula-avt.png" alt="Amber">
+                            <p>Eula</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/aloy-avt.png" alt="Amber">
+                            <p>Eloyo</p>
+                        </div>
+                        <div class="character-icon" data-char="amber">
+                            <img src="../../image/mika-avt.png" alt="Amber">
+                            <p>Mika</p>
                         </div>
                         <!-- Add more characters as needed -->
                     </div>
-                    <button class="nav-btn next">&#8250;</button>
+                    <button class="nav-btn next">
+                        <img src="../../image/swipe-btn-next.png" alt="">
+                    </button>
                 </div>
             </div>
             </div>

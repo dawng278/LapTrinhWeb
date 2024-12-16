@@ -500,7 +500,7 @@ div.poster_video-entry {
   position: absolute;
   width: 356px;
   height: 76px;
-  background: url(../image/btn-entry.png) no-repeat center center;
+  background: url(../../image/btn-entry.png) no-repeat center center;
   top: 18rem;
 }
 
@@ -535,7 +535,7 @@ div.poster_video-entry {
   height: 28px;
   transform: translate(-50%, -50%);
   background-position: center top;
-  background: url(../image/play-video-btn.png);
+  background: url(../../image/play-video-btn.png);
 }
 
 div.download {
@@ -614,7 +614,7 @@ div.poster-arrows {
 .news {
   display: flex;
   flex-direction: column;
-  background: url(../image/news_bg.jpg) no-repeat center / cover;
+  background: url(../../image/news_bg.jpg) no-repeat center / cover;
   width: 100%;
   min-height: 930px;
   padding: 40px 0;
@@ -732,13 +732,13 @@ div.poster-arrows {
   color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
   padding-left: 38px;
-  background: url(../image/news-more.png) no-repeat left center / 22px;
+  background: url(../../image/news-more.png) no-repeat left center / 22px;
   text-decoration: none;
 }
 
 .news-more:hover {
   color: rgba(255, 212, 159, 0.75);
-  background-image: url(../image/news-more_hover.png);
+  background-image: url(../../image/news-more_hover.png);
 }
 
 @media (max-width: 992px) {
